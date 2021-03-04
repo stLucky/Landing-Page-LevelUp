@@ -1,0 +1,42 @@
+// Colors
+
+$black-400: #000000;
+$white-400: #ffffff;
+$black-350: #1c1c1c;
+$orange-400: #ff9100;
+$dark-blue-400: #5a00a8;
+$purple-400: #de07fa;
+
+// Fonts
+
+$basic-font: "Arial", sans-serif;
+$custom-font: "Oswald", "Arial", sans-serif;
+
+// Viewports
+
+$tablet-width: 768px;
+$desktop-width: 1320px;
+
+$tablet: "(min-width: #{$tablet-width})";
+$desktop: "(min-width: #{$desktop-width})";
+
+// Other
+$main-product-height: 155px;
+$main-product-height-tablet: 310px;
+$main-product-height-desktop: 451px;
+
+$radius-section: 20px;
+$radius-section-tablet: 40px;
+$radius-section-desktop: 60px;
+
+$base-index: 10;
+
+$reviews-image-width: 200px;
+$reviews-image-width-tablet: 400px;
+$reviews-image-width-desktop: 600px;
+
+$reviews-image-height: 134px;
+$reviews-image-height-tablet: 267px;
+$reviews-image-height-desktop: 400px;
+
+$transition-duration: 200ms;

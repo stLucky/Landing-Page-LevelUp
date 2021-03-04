@@ -1,0 +1,44 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 25px;
+
+  font-weight: 500;
+  font-size: 16px;
+  font-family: inherit;
+  color: desaturate($purple-400, 40%);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  background-color: rgba($orange-400, 0.3);
+  border-radius: 10px;
+
+  transition: all $transition-duration;
+
+  @include box-shadow;
+  @include text-shadow;
+
+  &:hover {
+    color: desaturate($purple-400, 40%);
+
+    background-color: rgba($orange-400, 0.4);
+  }
+
+  &:active {
+    @include box-shadow-active;
+  }
+
+  @media #{$tablet} {
+    padding: 20px 35px;
+    font-size: 26px;
+    max-width: 800px;
+  }
+
+  @media #{$desktop} {
+    padding: 25px 35px;
+    font-size: 36px;
+    max-width: unset;
+  }
+}

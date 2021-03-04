@@ -1,0 +1,21 @@
+.title {
+  color: $orange-400;
+  font-size: 46px;
+  font-weight: 800;
+  word-spacing: -8px;
+  text-transform: capitalize;
+  text-shadow: -6px 4px 0 $black-400;
+
+  &--footer {
+    color: desaturate($purple-400, 40%);
+  }
+
+  @media #{$tablet} {
+    text-shadow: -12px 8px 0 $black-400;
+    font-size: 76px;
+  }
+
+  @media #{$desktop} {
+    font-size: 86px;
+  }
+}

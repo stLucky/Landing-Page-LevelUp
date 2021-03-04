@@ -1,0 +1,114 @@
+$list-bottom-margin: 20px;
+$list-bottom-margin-desktop: 40px;
+
+.structure {
+  position: relative;
+  z-index: $base-index - 1;
+
+  box-sizing: content-box;
+  min-height: $main-product-height;
+  margin: -$radius-section 0 0;
+  padding: $radius-section + 20px 0;
+
+  background: linear-gradient(21deg, $dark-blue-400, $black-350);
+  border-radius: 0 0 $radius-section $radius-section;
+
+  @media #{$tablet} {
+    min-height: $main-product-height-tablet;
+    margin: -$radius-section-tablet 0 0;
+    padding: $radius-section-tablet + 40px 0 $radius-section-tablet + 20px 0;
+
+    border-radius: 0 0 $radius-section-tablet $radius-section-tablet;
+  }
+
+  @media #{$desktop} {
+    min-height: $main-product-height-desktop;
+    margin: -$radius-section-desktop 0 0;
+    padding: $radius-section-desktop + 40px 0 $radius-section-desktop + 20px 0;
+
+    border-radius: 0 0 $radius-section-desktop $radius-section-desktop;
+  }
+}
+
+.structure__title {
+  margin: 0 0 20px;
+}
+
+.structure__product-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.structure__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 0 calc(-1 * #{$list-bottom-margin} + 40px);
+
+  color: rgba($white-400, 0.6);
+
+  @include text-shadow;
+
+  @media #{$desktop} {
+    margin: 0 0 calc(-1 * #{$list-bottom-margin-desktop} + 80px);
+  }
+}
+
+.structure__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
+  margin: 0 0 $list-bottom-margin;
+
+  &:nth-child(2n) {
+    justify-content: flex-end;
+  }
+
+  @media #{$desktop} {
+    margin: 0 0 $list-bottom-margin-desktop;
+  }
+}
+
+.structure__item-content {
+  width: 50%;
+
+  text-align: center;
+}
+
+.structure__img {
+  width: 75px;
+  height: 75px;
+
+  border: 6px solid rgba($black-400, 0.2);
+  border-radius: 50%;
+
+  @media #{$tablet} {
+    width: 150px;
+    height: 150px;
+
+    border-width: 12px;
+  }
+
+  @media #{$desktop} {
+    width: 250px;
+    height: 250px;
+
+    border-width: 16px;
+  }
+}
+
+.structure__text {
+  margin: 0;
+
+  @media #{$tablet} {
+    font-size: 20px;
+  }
+
+  @media #{$desktop} {
+    font-size: 28px;
+  }
+}

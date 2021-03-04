@@ -1,0 +1,33 @@
+.form-popup {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 5px;
+
+  font-size: 10px;
+  color: rgba($white-400, 0.6);
+
+  background-color: $dark-blue-400;
+  border-radius: 6px;
+
+  @media #{$tablet} {
+    padding: 8px;
+
+    font-size: 14px;
+  }
+
+  @media #{$desktop} {
+    padding: 10px;
+
+    font-size: 20px;
+  }
+}
+
+.form-popup__title {
+  margin: 0 0 5px;
+}
+
+.form-popup__message {
+  margin: 0;
+}

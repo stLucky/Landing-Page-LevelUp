@@ -1,0 +1,78 @@
+$arrow-width: 35px;
+$arrow-width-tablet: 55px;
+$arrow-width-desktop: 75px;
+
+.slider {
+  position: relative;
+
+  padding: 0 $arrow-width;
+
+  @media #{$tablet} {
+    padding: 0 $arrow-width-tablet;
+  }
+}
+
+.slider__item {
+  display: none;
+
+  &--current {
+    display: inline-flex;
+  }
+}
+
+.slider__button {
+  position: absolute;
+  top: $reviews-image-height / 2;
+
+  width: $arrow-width;
+  height: $arrow-width;
+  padding: 0;
+
+  background: url("../img/right-arrow.svg") no-repeat;
+  background-color: transparent;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  transition: transform $transition-duration;
+
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  &--back {
+    left: 0;
+
+    transform: rotate(-180deg) translate(0, 50%);
+    filter: drop-shadow(-2px 2px 0 $black-400);
+
+    &:hover {
+      transform: rotate(-180deg) translate(0, 50%) scale(0.95);
+    }
+  }
+
+  &--forward {
+    right: 0;
+
+    transform: translate(0, -50%);
+    filter: drop-shadow(-2px -2px 0 $black-400);
+
+    &:hover {
+      transform: translate(0, -50%) scale(0.95);
+    }
+  }
+
+  @media #{$tablet} {
+    top: $reviews-image-height-tablet / 2;
+
+    width: $arrow-width-tablet;
+    height: $arrow-width-tablet;
+  }
+
+  @media #{$desktop} {
+    top: $reviews-image-height-desktop / 2;
+
+    width: $arrow-width-desktop;
+    height: $arrow-width-desktop;
+  }
+}

@@ -1,0 +1,18 @@
+.main-product {
+  width: 100px;
+  height: $main-product-height;
+
+  filter: saturate(150%) drop-shadow(2px 0 10px rgba($black-400, 0.9));
+
+  @media #{$tablet} {
+    width: 200px;
+    height: $main-product-height-tablet;
+
+    filter: saturate(150%) drop-shadow(6px 0 20px rgba($black-400, 0.9));
+  }
+
+  @media #{$desktop} {
+    width: 291px;
+    height: $main-product-height-desktop;
+  }
+}
