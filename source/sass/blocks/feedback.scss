@@ -12,13 +12,11 @@
   @media #{$tablet} {
     margin: -$radius-section-tablet 0 0;
     padding: $radius-section-tablet + 40px 0 $radius-section-tablet + 20px 0;
-
   }
 
   @media #{$desktop} {
     margin: -$radius-section-desktop 0 0;
     padding: $radius-section-desktop + 40px 0 $radius-section-desktop + 20px 0;
-
   }
 }
 
